@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Cửa hàng Sách ABC</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Cửa hàng Sách ABC</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Sản phẩm</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Description shop -->
+      <section class="store-intro">
+        <h2>Chào mừng đến với Cửa hàng Sách ABC!</h2>
+        <p>
+          Nơi bạn có thể tìm thấy những cuốn sách hay nhất từ nhiều thể loại
+          khác nhau. Khám phá tri thức và tận hưởng niềm vui đọc sách.
+        </p>
+      </section>
+
+      <!-- Lits product -->
+      <section class="product-list-container">
+        <h2>Sản phẩm Nổi bật</h2>
+
+        <div class="controls-container">
+          <button id="showAddFormBtn" class="toggle-form-btn">
+            Thêm sản phẩm mới
+          </button>
+          <div class="search-bar">
+            <label for="searchInput">Tìm kiếm:</label>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Nhập tên sách để lọc..."
+            />
+          </div>
+        </div>
+
+        <!-- Add new product -->
+        <section id="addProductForm" class="contact-form hidden">
+          <h2>Thêm sản phẩm mới</h2>
+          <form action="#">
+            <div>
+              <label for="newProductName">Tên sản phẩm:</label>
+              <input
+                type="text"
+                id="newProductName"
+                name="newProductName"
+                required
+              />
+            </div>
+            <div>
+              <label for="newProductDesc">Mô tả:</label>
+              <textarea
+                id="newProductDesc"
+                name="newProductDesc"
+                rows="3"
+              ></textarea>
+            </div>
+            <div>
+              <label for="newProductPrice">Giá:</label>
+              <input
+                type="number"
+                id="newProductPrice"
+                name="newProductPrice"
+                required
+              />
+            </div>
+
+            <!-- show error -->
+            <div id="formError" class="error-message"></div>
+
+            <div>
+              <button type="submit">Lưu sản phẩm</button>
+              <button type="button" id="cancelAddBtn" class="btn-cancel">
+                Hủy
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <div class="product-list"></div>
+      </section>
+
+      <!-- Contact form-->
+      <section class="contact-form">
+        <h2>Đăng ký nhận tin</h2>
+        <p>
+          Nhập thông tin bên dưới để nhận thông báo về sách mới và khuyến mãi!
+        </p>
+
+        <form action="#">
+          <div>
+            <label for="name">Tên của bạn:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="message">Lời nhắn (tùy chọn):</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <div>
+            <button type="submit">Gửi thông tin</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Cửa hàng Sách ABC. Bảo lưu mọi quyền.</p>
+      <p>Địa chỉ: 123 Đường Sách, Quận Tri Thức, TP. Hồ Chí Minh</p>
+    </footer>
+  </body>
+</html>
