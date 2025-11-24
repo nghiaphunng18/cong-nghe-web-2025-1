@@ -73,11 +73,19 @@ function App() {
     try {
       if (isEditing) {
         // --- UPDATE ---
-        await axios.put(`${API_URL}/${currentUser.id}`, currentUser);
+        if (currentUser.id > 10) {
+          setUsers(
+            users.map((u) => (u.id === currentUser.id ? currentUser : u))
+          );
+          alert(`Updated user ID: ${currentUser.id}`);
+        } else {
+          await axios.put(`${API_URL}/${currentUser.id}`, currentUser);
 
-        // Manual UI Update
-        setUsers(users.map((u) => (u.id === currentUser.id ? currentUser : u)));
-        alert(`Updated user ID: ${currentUser.id}`);
+          setUsers(
+            users.map((u) => (u.id === currentUser.id ? currentUser : u))
+          );
+          alert(`Updated user ID: ${currentUser.id}`);
+        }
       } else {
         // --- CREATE ---
         const response = await axios.post(API_URL, currentUser);
