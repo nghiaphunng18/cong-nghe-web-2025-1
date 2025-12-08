@@ -1,0 +1,4 @@
+mongodbdata/
+
+# dependencies
+/node_modules
